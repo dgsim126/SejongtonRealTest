@@ -1,20 +1,21 @@
 require('dotenv').config();
 const express = require('express');
-// const { sequelize } = require("./models/index");
+// const cookieParser = require('cookie-parser');
+const { sequelize } = require("./models/index");
 // const surveyRouter = require("./routers/surveyRoute");
 // const postRouter= require("./routers/postRoute");  
 // const cors = require('cors');
 
 const app = express();
-const port = 3005;
+const port = 3308;
 
-// sequelize
-// .sync({ force: false })
-// .then(()=>{
-//     console.log('데이터베이스 연결 성공')
-// }).catch(err=>{
-//     console.log(err)
-// })
+sequelize
+.sync({ force: false })
+.then(()=>{
+    console.log('데이터베이스 연결 성공')
+}).catch(err=>{
+    console.log(err)
+})
 
 // EJS 뷰 엔진 설정
 // app.set('view engine', 'ejs');
