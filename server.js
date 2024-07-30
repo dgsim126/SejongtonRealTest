@@ -47,7 +47,7 @@ const app = express();
 const port = 8080;
 
 app.use(cors({
-    //origin: "http://localhost:3000", // 모든 도메인 허용
+    // origin: "http://localhost:3000", // 모든 도메인 허용
     origin: true,
     credentials: true // 쿠키를 포함한 요청을 허용
 }));
